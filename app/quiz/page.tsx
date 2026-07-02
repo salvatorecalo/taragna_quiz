@@ -12,10 +12,10 @@ export default function StartQuiz() {
         function createRandomQuiz() {
             const imgArray: string[] = []
             for (let i = 0; i < 10; i++) {
-                let randomIndex: number = Math.floor(Math.random() * (38 - 1) + 1)
+                let randomIndex: number = Math.floor(Math.random() * (90 - 1) + 1)
                 const item: string = `/${randomIndex}.png`
                 while (imgArray.includes(item)){
-                    randomIndex = Math.floor(Math.random() * (38 - 1) + 1)
+                    randomIndex = Math.floor(Math.random() * (90 - 1) + 1)
                 }
                 imgArray.push(`/${randomIndex}.png`)
             }
