@@ -10,13 +10,13 @@ export default function StartQuiz() {
     }
     useEffect(() => {
         function createRandomQuiz() {
-            const imgArray: string[] = []
+            const imgArray: Set<string> = new Set()
             for (let i = 0; i < 10; i++) {
                 const randomIndex = Math.floor(Math.random() * (38 - 1) + 1)
                 console.log(`/${randomIndex}.png`)
-                imgArray.push(`/${randomIndex}.png`)
+                imgArray.add(`/${randomIndex}.png`)
             }
-            setImgArray(imgArray)
+            setImgArray(Array.from(imgArray))
         }
 
         createRandomQuiz()
